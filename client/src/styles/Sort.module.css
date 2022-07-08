@@ -1,0 +1,19 @@
+.sortSvg{
+  display: inline-block;
+  width: 25px;
+  margin-right: 10px;
+}
+.sortDiv:hover{
+  background-color: #69433f;
+  box-shadow: rgba(0, 0, 0, 0.651) 0px 2px 6px;
+}
+
+.sortBtn{
+  display: inline;
+  margin: 8px 0px 8px 0px;
+}
+
+.sortDiv{
+  cursor: pointer;
+  margin: 14px;
+}

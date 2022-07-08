@@ -1,0 +1,14 @@
+.formContainer{
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+.form{
+  background-color: burlywood;
+  margin-left: 60px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  padding: 40px;
+  border-radius: 3%;
+}

@@ -1,0 +1,17 @@
+.CardsContainer{
+  padding: 30px;
+  padding-top: 70px;
+  column-gap: 25px;
+  row-gap: 25px;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  float: right;
+  margin: 0;
+  background-image: url("wood.jpg");
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 0.6%;
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px;
+}
