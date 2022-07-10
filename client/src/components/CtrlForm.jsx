@@ -118,7 +118,7 @@ export default function CtrlForm() {
         Ketogenic <br></br>
       </label>
       <label >
-        <input className={styles.check} type="checkbox" name="pescarian" onChange={handleSelect} />
+        <input className={styles.check} type="checkbox" name="pescetarian" onChange={handleSelect} />
         Pescarian <br></br>
       </label>
       <label >

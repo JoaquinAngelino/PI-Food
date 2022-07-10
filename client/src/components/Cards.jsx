@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import style from '../styles/Cards.module.css'
@@ -9,6 +10,10 @@ export default function Cards() {
   const [currentPage, setCurrentPage] = useState(1)
   const [postPerPage, setPostPerPage] = useState(9)
   const recipes = useSelector(state => state.recipes)
+
+useEffect(()=>{
+  setCurrentPage(1)
+},[recipes])
 
   const idxLastItem = currentPage * postPerPage
   const ixdFirstItem = idxLastItem - postPerPage

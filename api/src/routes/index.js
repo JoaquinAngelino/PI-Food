@@ -23,7 +23,7 @@ router.get('/recipes', async (req, res) => {
       })
       return res.status(200).json(allRecipes)
     }
-    const apiGet = await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + name + "&addRecipeInformation=true&apiKey=" + process.env.API_KEY + "&includeNutrition=true")
+    const apiGet = await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + name + "&addRecipeInformation=true&apiKey=" + process.env.API_KEY2 + "&includeNutrition=true")
 
     for(const e of apiGet.data.results){
       await loadRecipe(e)
@@ -52,7 +52,7 @@ router.get('/recipes/:id', async (req, res) => {
     if (await Recipe.count() === 0) {
       await loadDefault()
     }
-    const apiSearch = await axios.get("https://api.spoonacular.com/recipes/" + id + "/information?apiKey=" + process.env.API_KEY)
+    const apiSearch = await axios.get("https://api.spoonacular.com/recipes/" + id + "/information?apiKey=" + process.env.API_KEY2)
     loadRecipe(apiSearch.data)
     return res.send(apiSearch.data)
   } catch (err) {

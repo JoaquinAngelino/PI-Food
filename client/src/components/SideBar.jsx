@@ -20,12 +20,16 @@ export default function SideBar() {
     dispatch(filterByDiet(filter))
   }
 
-
+  const handleClick = () => {
+    if(window.location.pathname === "/home"){
+      window.location.reload()
+    }
+  }
 
   return (
     <div className={style.SideBarcontainer}>
       <Link to="/home">
-        <img src={logo} className={style.imgStyle} alt="logo" />
+        <img onClick={()=> handleClick()} src={logo} className={style.imgStyle} alt="logo" />
       </Link>
       <AlphabeticOrder />
       <ScoreOrder />
@@ -39,7 +43,7 @@ export default function SideBar() {
           <li className={style.filterList} onClick={() => handleFilter("paleolithic")}>Paleolithic</li>
           <li className={style.filterList} onClick={() => handleFilter("primal")}>Primal</li>
           <li className={style.filterList} onClick={() => handleFilter("whole 30")}>Whole 30</li>
-          <li className={style.filterList} onClick={() => handleFilter("pescarian")}>Pescarian</li>
+          <li className={style.filterList} onClick={() => handleFilter("pescetarian")}>Pescetarian</li>
           <li className={style.filterList} onClick={() => handleFilter("lacto ovo vegetarian")}>Lacto ovo vegetarian</li>
           <li className={style.filterList} onClick={() => handleFilter("vegan")}>Vegan</li>
         </ul>

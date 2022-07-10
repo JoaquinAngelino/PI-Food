@@ -38,7 +38,7 @@ const loadDefault = async () => {
     ]
     await Diet.bulkCreate(dietList)
 
-    const apiGet = await axios.get("https://api.spoonacular.com/recipes/complexSearch?number=100&addRecipeInformation=true&apiKey="+process.env.API_KEY+"&includeNutrition=true")
+    const apiGet = await axios.get("https://api.spoonacular.com/recipes/complexSearch?number=100&addRecipeInformation=true&apiKey="+process.env.API_KEY2+"&includeNutrition=true")
     let recipesData = apiGet.data.results.map(e => {
       return {
         title: e.title.toLowerCase(),
